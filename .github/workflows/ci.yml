@@ -19,4 +19,5 @@ jobs:
     - name: first test
       run: pwd 
     - name: second test
-      run: ls
+      working-directory: /home/runner/work/git-analytics-actions
+      run: ls -l
