@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd aggregate
+cargo build --release
+cd ..
+cp ./aggregate/target/release/aggregate ./bin

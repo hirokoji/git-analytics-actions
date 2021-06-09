@@ -1,0 +1,14 @@
+name: Simple workflow on pull-request
+
+on:
+  pull_request:
+
+jobs:
+  helloWorld:
+    name: Hello World Job
+    runs-on: ubuntu-latest
+    steps:
+    - name: first test
+      run: pwd 
+    - name: second test
+      run: ls
