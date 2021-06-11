@@ -3,4 +3,4 @@
 cd aggregate
 cargo build --release
 cd ..
-cp ./aggregate/target/release/aggregate ./bin
+cp ./aggregate/target/release/aggregate ./bin/ubuntu

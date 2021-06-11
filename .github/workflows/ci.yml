@@ -28,5 +28,9 @@ jobs:
 
     - name: first test
       run: ls -l
+
     - name: second test
-      run: git branch
+      run: ls -l ./bin/
+
+    - name: third test
+      run: ./bin/ubuntu/aggregate
