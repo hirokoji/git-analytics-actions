@@ -1,7 +1,7 @@
 name: Simple workflow on pull-request
 
 on:
-  pull_request:
+  push:
   workflow_dispatch:
     inputs:
       logLevel:
@@ -16,11 +16,17 @@ jobs:
     name: Hello World Job
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+          node-version: '12.x'
+
     - name: first test
       run: ls -l
     - name: second test
-      working-directory: /home/runner/work/git-analytics-actions
-      run: ls -l
-    - name: third test
-      working-directory: /home/runner/work/git-analytics-actions/git-analytics-actions
-      run: ls -l
+      run: git branch
