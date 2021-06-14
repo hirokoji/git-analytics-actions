@@ -21,11 +21,6 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Setup Node
-      uses: actions/setup-node@v1
-      with:
-          node-version: '12.x'
-
     - name: first test
       run: ls -l
 
